@@ -1,13 +1,12 @@
-#include "wifiAnalyzerApp.h"
+#include "WifiAnalyzer.h"
 #include <QListView>
 #include <QMessageBox>
 #include <QDebug>
 #include <QtCharts>
 
-
 using namespace QtCharts;
 
-wifiAnalyzerApp::wifiAnalyzerApp(QWidget *parent)
+WifiAnalyzer::WifiAnalyzer(QWidget *parent)
     : QWidget(parent)
 {
     ui.setupUi(this);
@@ -16,7 +15,7 @@ wifiAnalyzerApp::wifiAnalyzerApp(QWidget *parent)
     ui.listView->setModel(&model);
 }
 
-void wifiAnalyzerApp::initializeWlanDetails() {
+void WifiAnalyzer::initializeWlanDetails() {
     int iRet = 0;
 
     WCHAR GuidString[39] = { 0 }; // interface GUID string
@@ -59,7 +58,7 @@ void wifiAnalyzerApp::initializeWlanDetails() {
 
 }
 
-void wifiAnalyzerApp::initializeChart() { //create an empty chart
+void WifiAnalyzer::initializeChart() {
     QSplineSeries* series = new QSplineSeries();
     this->chart = new QChart();
     chart->legend()->hide();
@@ -71,20 +70,20 @@ void wifiAnalyzerApp::initializeChart() { //create an empty chart
     axisX->setTitleText("Channel");
     axisY->setTitleText("RSSI(dbm)");
 
-    axisX->setRange(-1, 14);
-    axisX->setTickCount(16);
+    axisX->setRange(-1, 15);
+    axisX->setTickCount(17);
     axisX->setLabelFormat("%d");
 
     axisY->setRange(-100, -10);
     axisY->setTickCount(10);
-    chart->setTitle("Channel distribution graph");
+    chart->setTitle("Channel distribution");
 
     this->chartView = new QChartView(chart);
     ui.horizontalLayout_2->addWidget(chartView);
     chartView->setRenderHint(QPainter::Antialiasing);
 }
 
-void wifiAnalyzerApp::performScan() {
+void WifiAnalyzer::performScan() {
     /* used for available networks*/
     PWLAN_AVAILABLE_NETWORK_LIST pNetList = NULL;
     PWLAN_AVAILABLE_NETWORK pNetEntry = NULL;
@@ -125,7 +124,7 @@ void wifiAnalyzerApp::performScan() {
     model.updateModel(pNetList, pBssList);
 }
 
-void wifiAnalyzerApp::plotData()
+void WifiAnalyzer::plotData()
 {
     this->chart->removeAllSeries();
 
@@ -162,15 +161,15 @@ void wifiAnalyzerApp::plotData()
     axisX->setTitleText("Channel");
     axisY->setTitleText("RSSI(dbm)");
 
-    axisX->setRange(-1, 14);
-    axisX->setTickCount(16);
+    axisX->setRange(-1, 15);
+    axisX->setTickCount(17);
     axisX->setLabelFormat("%d");
 
     axisY->setRange(-100, -10);
     axisY->setTickCount(10);
 }
 
-void wifiAnalyzerApp::on_scanButton_clicked() {
+void WifiAnalyzer::on_scanButton_clicked() {
     performScan();
     plotData();
 }

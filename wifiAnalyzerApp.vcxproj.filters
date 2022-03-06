@@ -23,16 +23,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="wifiAnalyzerApp.qrc">
+    <QtRcc Include="WifiAnalyzer.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtUic Include="wifiAnalyzerApp.ui">
+    <QtUic Include="WifiAnalyzer.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="wifiAnalyzerApp.h">
+    <QtMoc Include="WifiAnalyzer.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClCompile Include="wifiAnalyzerApp.cpp">
+    <ClCompile Include="WifiAnalyzer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -40,15 +40,12 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mymodel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="wlanmanager.cpp">
+    <ClCompile Include="NetworkListModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="mymodel.h">
+    <QtMoc Include="NetworkListModel.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

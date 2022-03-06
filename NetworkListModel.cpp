@@ -1,5 +1,5 @@
 #pragma once
-#include "mymodel.h"
+#include "NetworkListModel.h"
 #include<stdlib.h>
 #include <QDebug>
 #include <regex>

@@ -30,7 +30,7 @@ public:
     std::map <int, std::vector<std::pair<std::string, long>>> getSsidChannelMap();
 
 private:
-    QIcon noIcon = QIcon("no_signal.png"); // initialize them here so you don't create them every time
+    QIcon noIcon = QIcon("no_signal.png");
     QIcon lowIcon = QIcon("low_signal.png");
     QIcon medIcon = QIcon("med_signal.png");
     QIcon highIcon = QIcon("high_signal.png");

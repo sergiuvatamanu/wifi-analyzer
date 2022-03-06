@@ -3,16 +3,16 @@
 #include <QtWidgets/QWidget>
 #include <QtCharts>
 
-#include "ui_wifiAnalyzerApp.h"
-#include "mymodel.h"
+#include "ui_wifiAnalyzer.h"
+#include "NetworkListModel.h"
 
 
-class wifiAnalyzerApp : public QWidget
+class WifiAnalyzer : public QWidget
 {
     Q_OBJECT
 
 public:
-    wifiAnalyzerApp(QWidget *parent = Q_NULLPTR);
+    WifiAnalyzer(QWidget *parent = Q_NULLPTR);
 
 private:
     // singletonish treatment
