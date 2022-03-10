@@ -15,6 +15,8 @@
 #pragma comment(lib, "wlanapi.lib")
 #pragma comment(lib, "ole32.lib")
 
+#include "NetworkListItem.h"
+
 class NetworkListModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -22,12 +24,11 @@ public:
     NetworkListModel(QObject* parent = nullptr);
     int rowCount(const QModelIndex& parent = QModelIndex()) const override;
     QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
-    void updateModel(PWLAN_AVAILABLE_NETWORK_LIST pNetList, PWLAN_BSS_LIST pBssList);
+    void updateModel(std::vector<NetworkListItem> netList);
 
-    std::map <int, std::vector<std::pair<std::string, long>>> mymap;
-    
-    void mapSsidsToChannels();
-    std::map <int, std::vector<std::pair<std::string, long>>> getSsidChannelMap();
+    const std::vector<NetworkListItem> getNetList() {
+        return netList;
+    }
 
 private:
     QIcon noIcon = QIcon("no_signal.png");
@@ -35,19 +36,5 @@ private:
     QIcon medIcon = QIcon("med_signal.png");
     QIcon highIcon = QIcon("high_signal.png");
 
-    PWLAN_INTERFACE_INFO_LIST pIfList = NULL;
-    PWLAN_INTERFACE_INFO pIfInfo = NULL;
-
-    PWLAN_AVAILABLE_NETWORK_LIST pNetList = NULL;
-    PWLAN_BSS_LIST pBssList = NULL;
-
-    WLAN_BSS_ENTRY getBssEntry(int idx) {
-
-    }
-
-    WLAN_AVAILABLE_NETWORK getAvailableNetworkEntry(int idx) {
-
-    }
-
-
+    std::vector<NetworkListItem> netList;
 };

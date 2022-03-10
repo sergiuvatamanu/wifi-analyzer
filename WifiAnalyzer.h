@@ -17,7 +17,7 @@ public:
 private:
     // singletonish treatment
     HANDLE hClient = NULL; // the interface handler
-    DWORD dwMaxClient = 2; // 1 for windows xp apparently
+    DWORD dwMaxClient = 2; // 2 for NT
     DWORD dwCurVersion = 0;
     DWORD dwResult = 0;
     DWORD dwRetVal = 0;

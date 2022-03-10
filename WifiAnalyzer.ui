@@ -35,13 +35,6 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="labelGUID">
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QLabel" name="labelDesc">
           <property name="text">
            <string>TextLabel</string>
@@ -74,7 +67,7 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="wifiAnalyzerApp.qrc"/>
+  <include location="WifiAnalyzer.qrc"/>
  </resources>
  <connections/>
 </ui>
