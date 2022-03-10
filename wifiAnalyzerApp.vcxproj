@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="model\NetworkListItem.h" />
+    <ClInclude Include="util.h" />
     <QtMoc Include="model\NetworkListModel.h" />
   </ItemGroup>
   <ItemGroup>

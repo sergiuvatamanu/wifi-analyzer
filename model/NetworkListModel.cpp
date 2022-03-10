@@ -1,6 +1,6 @@
 #pragma once
 #include "NetworkListModel.h"
-#include<stdlib.h>
+#include <stdlib.h>
 #include <QDebug>
 #include <regex>
 
