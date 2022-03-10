@@ -3,7 +3,7 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QtCharts>
-#include "NetworkListItem.h"
+#include "model/NetworkListItem.h"
 
 using namespace QtCharts;
 

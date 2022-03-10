@@ -18,4 +18,3 @@ public:
 	std::string auth;
 	std::string cipher;
 };
-

@@ -4,7 +4,7 @@
 #include <QtCharts>
 
 #include "ui_wifiAnalyzer.h"
-#include "NetworkListModel.h"
+#include "model/NetworkListModel.h"
 
 
 class WifiAnalyzer : public QWidget

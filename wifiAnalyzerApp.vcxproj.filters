@@ -23,12 +23,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="WifiAnalyzer.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtUic Include="WifiAnalyzer.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
     <QtMoc Include="WifiAnalyzer.h">
       <Filter>Header Files</Filter>
     </QtMoc>
@@ -40,35 +34,45 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NetworkListModel.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="model\NetworkListItem.cpp">
+      <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="NetworkListItem.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="model\NetworkListModel.cpp">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="NetworkListModel.h">
+    <ClInclude Include="model\NetworkListItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="model\NetworkListModel.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="high_signal.png">
+    <Image Include="resources\high_signal.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="low_signal.png">
+    <Image Include="resources\low_signal.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="med_signal.png">
+    <Image Include="resources\med_signal.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="no_signal.png">
+    <Image Include="resources\no_signal.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NetworkListItem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <QtUic Include="qt\WifiAnalyzer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="qt\WifiAnalyzer.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
   </ItemGroup>
 </Project>

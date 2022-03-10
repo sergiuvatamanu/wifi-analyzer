@@ -31,10 +31,10 @@ public:
     }
 
 private:
-    QIcon noIcon = QIcon("no_signal.png");
-    QIcon lowIcon = QIcon("low_signal.png");
-    QIcon medIcon = QIcon("med_signal.png");
-    QIcon highIcon = QIcon("high_signal.png");
+    QIcon noIcon = QIcon("resources/no_signal.png");
+    QIcon lowIcon = QIcon("resources/low_signal.png");
+    QIcon medIcon = QIcon("resources/med_signal.png");
+    QIcon highIcon = QIcon("resources/high_signal.png");
 
     std::vector<NetworkListItem> netList;
 };

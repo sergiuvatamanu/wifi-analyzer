@@ -86,25 +86,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <QtRcc Include="WifiAnalyzer.qrc" />
-    <QtUic Include="WifiAnalyzer.ui" />
     <QtMoc Include="WifiAnalyzer.h" />
-    <ClCompile Include="NetworkListItem.cpp" />
-    <ClCompile Include="NetworkListModel.cpp" />
+    <ClCompile Include="model\NetworkListItem.cpp" />
+    <ClCompile Include="model\NetworkListModel.cpp" />
     <ClCompile Include="WifiAnalyzer.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="NetworkListModel.h" />
+    <ClInclude Include="model\NetworkListItem.h" />
+    <QtMoc Include="model\NetworkListModel.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="high_signal.png" />
-    <Image Include="low_signal.png" />
-    <Image Include="med_signal.png" />
-    <Image Include="no_signal.png" />
+    <Image Include="resources\high_signal.png" />
+    <Image Include="resources\low_signal.png" />
+    <Image Include="resources\med_signal.png" />
+    <Image Include="resources\no_signal.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NetworkListItem.h" />
+    <QtUic Include="qt\WifiAnalyzer.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="qt\WifiAnalyzer.qrc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
