@@ -2,19 +2,6 @@
 #include <QAbstractListModel>
 #include <QIcon>
 
-#include <windows.h>
-#include <wlanapi.h>
-#include <objbase.h>
-#include <wtypes.h>
-#include <iphlpapi.h>
-
-#include <stdio.h>
-#include <stdlib.h>
-
-// Need to link with Wlanapi.lib and Ole32.lib
-#pragma comment(lib, "wlanapi.lib")
-#pragma comment(lib, "ole32.lib")
-
 #include "NetworkListItem.h"
 
 class NetworkListModel : public QAbstractListModel

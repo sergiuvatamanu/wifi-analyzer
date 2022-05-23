@@ -6,8 +6,6 @@
 #include "model/NetworkListItem.h"
 #include "util.h"
 
-using namespace QtCharts;
-
 WifiAnalyzer::WifiAnalyzer(QWidget *parent)
     : QWidget(parent)
 {
@@ -43,7 +41,6 @@ void WifiAnalyzer::initializeWlanDetails() {
     else {
         ui.labelState->setText("Unknown");
     }
-
 }
 
 void WifiAnalyzer::initializeChart() {

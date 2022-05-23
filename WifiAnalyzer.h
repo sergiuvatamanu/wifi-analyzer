@@ -1,11 +1,12 @@
 #pragma once
-
 #include <QtWidgets/QWidget>
 #include <QtCharts>
 
+#include <wlanapi.h> // Need to link with Wlanapi.lib and Ole32.lib
+#pragma comment(lib, "wlanapi.lib")
+#pragma comment(lib, "ole32.lib")
 #include "ui_wifiAnalyzer.h"
 #include "model/NetworkListModel.h"
-
 
 class WifiAnalyzer : public QWidget
 {

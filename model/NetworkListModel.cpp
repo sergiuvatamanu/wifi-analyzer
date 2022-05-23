@@ -1,8 +1,6 @@
 #pragma once
 #include "NetworkListModel.h"
-#include <stdlib.h>
 #include <QDebug>
-#include <regex>
 
 NetworkListModel::NetworkListModel(QObject* parent)
     : QAbstractListModel(parent)

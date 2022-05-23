@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <wlanapi.h>
+
+
 std::string getMacStdString(unsigned char* mac) {
     char mac_cstr[64];
     snprintf(mac_cstr, 64, "%.2x:%.2x:%.2x:%.2x:%.2x:%.2x",
